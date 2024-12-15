@@ -1,0 +1,48 @@
+{
+  "name": "react-svg-clock-face",
+  "packageManager": "yarn@4.5.1",
+  "version": "1.0.0",
+  "description": "analog clock face with may possibilaties for customizing",
+  "private": true,
+  "homepage": ".",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "repository": {
+  "type": "git",
+  "url": "git+https://github.com/GermanJack/react-svg-clock-face.git",
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "react",
+    "typescript",
+    "clock face",
+    "analog clock"
+  ],
+  "license": "MIT",
+  "author": "Jürgen Schneiderat (GermanJack)"
+},
+  "dependencies": {
+    "@types/react": "^19.0.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-scripts": "^5.0.1",
+    "typescript": "^5.7.2"
+  },
+  "scripts": {
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run prettier && npm run lint"
+  }
+}
