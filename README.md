@@ -12,5 +12,4 @@ define an object of type Clock and add <Analogcloc [your object]/>
 parameter of type Clock:
 
 | parameter | type | comment |
-| --- | --- |
-
+| --- | --- | --- |
