@@ -140,7 +140,7 @@ class Clock {
     this.SecondHandColor = SecondHandColor_ ? SecondHandColor_ : '#ff0000'
     this.SecondHandRadius = SecondHandRadius_ ? SecondHandRadius_ : 0
 
-    this.Mode = Mode_ ? Mode_ : 3
+    this.Mode = Mode_ ? Mode_ : 1
     this.ValueString = ValueString_ ? ValueString_ : '10:10:30'
     this.ValueDate = ValueDate_ ? ValueDate_ : new Date()
     this.ID = ID_ ? ID_ : 'AnalogClock1'
