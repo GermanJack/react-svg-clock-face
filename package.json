@@ -3,31 +3,31 @@
   "packageManager": "yarn@4.5.1",
   "version": "1.0.0",
   "description": "analog clock face with may possibilaties for customizing",
-  "private": true,
+  "private": false,
   "homepage": ".",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
   "repository": {
-  "type": "git",
-  "url": "git+https://github.com/GermanJack/react-svg-clock-face.git",
-  "peerDependencies": {
-    "react": ">=16"
+    "type": "git",
+    "url": "git+https://github.com/GermanJack/react-svg-clock-face.git",
+    "peerDependencies": {
+      "react": ">=16"
+    },
+    "files": [
+      "dist",
+      "LICENSE",
+      "README.md"
+    ],
+    "keywords": [
+      "react",
+      "typescript",
+      "clock face",
+      "analog clock"
+    ],
+    "license": "MIT",
+    "author": "Jürgen Schneiderat (GermanJack)"
   },
-  "files": [
-    "dist",
-    "LICENSE",
-    "README.md"
-  ],
-  "keywords": [
-    "react",
-    "typescript",
-    "clock face",
-    "analog clock"
-  ],
-  "license": "MIT",
-  "author": "Jürgen Schneiderat (GermanJack)"
-},
   "dependencies": {
     "@types/react": "^19.0.1",
     "react": "^19.0.0",
@@ -43,6 +43,30 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run prettier && npm run lint"
+    "prepublishOnly": "npm test && npm run prettier && npm run lint",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "jesttest": "jest --config jestconfig.json"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.2.4",
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.17.0",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.1.0",
+    "@types/jest": "^29.5.14",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0",
+    "jest": "^29.7.0",
+    "jest-canvas-mock": "^2.5.2",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.4.2",
+    "ts-jest": "^29.2.5"
   }
 }
